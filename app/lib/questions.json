@@ -1,0 +1,11 @@
+[{
+  "title": "Air Speed",
+  "slug": "air_speed",
+  "question": "What is the average air speed of an African swallow?",
+  "options": [15, 25, 35]
+}, {
+  "title": "Colors",
+  "slug": "colors",
+  "question": "What is your favorite color?",
+  "options": ["Red", "Green", "Blue"]
+}]
