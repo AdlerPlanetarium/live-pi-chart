@@ -29,7 +29,10 @@ PieChart = React.createClass
         .showLabels(true)
 
       @setState chart: chart
-      setInterval @draw, 5000
+
+  componentWillUnmount : ->
+    questionsRef.child(@props.question.slug).off 'child_added', @handleUpdate
+    questionsRef.child(@props.question.slug).off 'child_changed', @handleUpdate
 
   draw: ->
     d3.select("##{@props.question.slug} svg")
@@ -42,6 +45,8 @@ PieChart = React.createClass
     index = snapshot.name()
     votes = snapshot.val()
     @state.results[index].value = votes
+
+    @draw()
 
   render: ->
     <div className="pie-chart">

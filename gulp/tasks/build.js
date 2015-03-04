@@ -3,6 +3,7 @@ var runSequence = require('run-sequence');
 
 gulp.task('build', [
   'html',
+  'vendor',
   'browserify',
   'stylus'
 ]);

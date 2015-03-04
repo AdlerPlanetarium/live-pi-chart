@@ -7,13 +7,16 @@ Question = require './pages/question'
 QuestionsList = require './pages/questions-list'
 PieChartList = require './components/pie-chart-list'
 
+{ ref } = require './stores/db'
+
 App = React.createClass
   displayName: 'App'
   mixins: [Navigation]
 
   render: ->
     <div className="app">
-      <h1>Pi Day!</h1>
+      <h1 className="center">Pi Day!</h1>
+
       <div className="app-container">
         <@props.activeRouteHandler/>
       </div>
@@ -25,7 +28,7 @@ Home = React.createClass
   render: ->
     <div className="home">
       <PieChartList />
-      <p><Link to="questions">Question List</Link></p>
+      <p className="center"><Link to="questions">Question List</Link></p>
     </div>
 
 Router =

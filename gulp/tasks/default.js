@@ -4,4 +4,4 @@
 
 var gulp = require('gulp');
 
-gulp.task('default', ['clean', 'serve', 'html', 'stylus', 'watch', 'build']);
+gulp.task('default', ['clean', 'serve', 'html', 'vendor', 'stylus', 'watch', 'build']);
