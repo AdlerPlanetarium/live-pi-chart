@@ -18,7 +18,7 @@ Question = React.createClass
     questionsRef.child(@props.params.questionSlug).child(i).transaction (currentVotes) ->
       (currentVotes || 0) + 1
 
-    setInterval =>
+    setTimeout =>
       @transitionTo 'app'
     , 2000
 
