@@ -1,13 +1,11 @@
-# @cjsx React.DOM
 React = require 'react'
-{ Routes, Route, DefaultRoute, Link, Navigation } = require 'react-router'
+Router = require 'react-router'
+{ Route, RouteHandler, DefaultRoute, Link, Navigation } = require 'react-router'
 _ = require 'underscore'
 
 Question = require './pages/question'
 QuestionsList = require './pages/questions-list'
 PieChartList = require './components/pie-chart-list'
-
-{ ref } = require './stores/db'
 
 App = React.createClass
   displayName: 'App'
@@ -15,10 +13,9 @@ App = React.createClass
 
   render: ->
     <div className="app">
-      <h1 className="center">Pi Day!</h1>
-
       <div className="app-container">
-        <@props.activeRouteHandler/>
+        <h1 className="center">Pi Day!</h1>
+        <RouteHandler {...this.props} />
       </div>
     </div>
 
@@ -31,14 +28,13 @@ Home = React.createClass
       <p className="center"><Link to="questions">Question List</Link></p>
     </div>
 
-Router =
-  <Routes>
-    <Route name="app" path="/" handler={ App }>
-      <Route name="questions" handler={ QuestionsList } />
-      <Route name="question" path="questions/:questionSlug" handler={ Question } />
-      <DefaultRoute handler={ Home } />
-    </Route>
-  </Routes>
+routes =
+  <Route name="app" path="/" handler={ App }>
+    <Route name="questions" path="questions" handler={ QuestionsList } />
+    <Route name="question" path="questions/:questionSlug" handler={ Question } />
+    <DefaultRoute handler={ Home } />
+  </Route>
 
-React.renderComponent Router, document.body
+Router.run routes, (Handler) ->
+  React.render <Handler />, document.body
 window.React = React

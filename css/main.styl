@@ -9,14 +9,20 @@ html
 
 .pie-chart-list
   display: flex
+  flex-wrap: wrap
   justify-content: center
+
+.pie-chart-list-item
+  text-align: center
+  width: 33%
 
 .pie-chart
   position: relative
 
   svg
-    height: 450px
-    width: 400px
+    height: 400px
+    margin: 0 auto
+    width: 360px
 
 .question
   font-size: 44px
@@ -28,8 +34,12 @@ html
 
     .option
       cursor: pointer
-      font-size: 36px
+      font-size: 30px
       padding: 15px
 
       &:hover
         background: #ffb
+
+button
+  padding: 0.2em 0.6em
+
