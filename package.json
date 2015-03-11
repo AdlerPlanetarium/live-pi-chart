@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "start": "gulp",
-    "deploy-to-staging": "gulp build-for-deploy && publisssh"
+    "deploy": "ln -s ./app/lib/config-all.coffee ./app/lib/config.coffee && gulp clean && gulp build && publisssh --config all-deploy.coffee && gulp clean",
+    "deploy-to-two": "ln -s ./app/lib/config-two.coffee ./app/lib/config.coffee && gulp clean && gulp build && publisssh && gulp clean",
+    "deploy-to-three": "ln -s ./app/lib/config-three.coffee ./app/lib/config.coffee && gulp clean && gulp build && publisssh && gulp clean",
+    "deploy-all": "npm run deploy && npm run deploy-to-two && npm run deploy-to-three"
   },
   "author": "Zooniverse",
   "browserify": {

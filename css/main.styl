@@ -1,8 +1,10 @@
 @import "nib"
 @import "nvd3"
 
-html
+html, body
   // noop
+  background: #000
+  color: #fff
 
 .center
   text-align: center
@@ -30,16 +32,26 @@ html
 
   .options-list
     display: flex
+    flex-wrap: wrap
     justify-content: center
 
     .option
+      border: 3px solid transparent
       cursor: pointer
       font-size: 30px
       padding: 15px
 
       &:hover
-        background: #ffb
+        border-color: #f00
 
 button
+  background: white
+  border-radius: 5px
   padding: 0.2em 0.6em
+  color: black
 
+svg text
+  stroke: #fff
+
+.nvtooltip p
+  color: #000

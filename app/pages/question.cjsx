@@ -31,13 +31,13 @@ Question = React.createClass
     questionsRef.child(@getParams().questionSlug).child(i).transaction (currentVotes) ->
       (currentVotes || 0) + 1
 
-    setTimeout =>
-      # Next question
-      if @state.index + 1 >= questionDefinitions.length
+    # Next question
+    if @state.index + 1 >= questionDefinitions.length
+      setTimeout =>
         @transitionTo 'app'
-      else
-        @transitionTo 'question', { questionSlug: questionDefinitions[@state.index + 1].slug}
-    , 1500
+      , 2500
+    else
+      @transitionTo 'question', { questionSlug: questionDefinitions[@state.index + 1].slug}
 
   render: ->
     optionNodes = for option, i in @state.question.options
