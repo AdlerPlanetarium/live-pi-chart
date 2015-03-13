@@ -13,6 +13,8 @@ QuestionsList = React.createClass
       <div className="question" key={i}><Link to="question" params={questionSlug: question.slug}>{question.title}</Link></div>
 
     <div className="questionsList">
+      <h1 className="center"><Link to="question" params={{questionSlug: questionsDefinitions[0].slug}}>Start!</Link></h1>
+      <br/><br/><br/>
       {questionNodes}
     </div>
 

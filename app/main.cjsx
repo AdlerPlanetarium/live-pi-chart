@@ -14,7 +14,6 @@ App = React.createClass
   render: ->
     <div className="app">
       <div className="app-container">
-        <h1 className="center">Pi Day!</h1>
         <RouteHandler {...this.props} />
       </div>
     </div>

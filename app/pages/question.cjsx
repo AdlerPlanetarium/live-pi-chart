@@ -34,7 +34,7 @@ Question = React.createClass
     # Next question
     if @state.index + 1 >= questionDefinitions.length
       setTimeout =>
-        @transitionTo 'app'
+        @transitionTo 'questions'
       , 2500
     else
       @transitionTo 'question', { questionSlug: questionDefinitions[@state.index + 1].slug}

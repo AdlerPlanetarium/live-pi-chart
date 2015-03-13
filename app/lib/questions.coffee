@@ -21,9 +21,9 @@ module.exports = [{
     "Neptune"
   ]
 }, {
-  "title": "Fantastic Features",
+  "title": "Otherworldly Objects",
   "slug": "fantastic_features",
-  "question": "Besides planets, what is the coolest astronomical feature?",
+  "question": "Besides planets, what is the coolest astronomical object?",
   "options": [
     "Black holes",
     "Comets",
