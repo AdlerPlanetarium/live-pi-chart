@@ -1,9 +1,9 @@
 {
-  "name": "Astro-Overloads",
-  "version": "1.0.0",
+  "name": "live-pi-chart",
+  "version": "2.0.0",
   "scripts": {
     "start": "gulp",
-    "deploy": "gulp clean && gulp build && publisssh --config all-deploy.coffee && gulp clean"
+    "deploy": "gulp clean && gulp build && publisssh ./public/build adler-staging/live-pi-chart -k ${ADLER_AWS_ACCESS_KEY_ID} -s ${ADLER_AWS_SECRET_ACCESS_KEY} && gulp clean"
   },
   "author": "Zooniverse",
   "browserify": {
@@ -42,7 +42,7 @@
   "dependencies": {
     "react": "0.12.1",
     "react-router": "0.11.6",
-    "publisssh": "0.2.6",
+    "publisssh": "^1.0.0",
     "underscore": "1.7.0",
     "firebase": "1.1.2",
     "moment": "2.8.3",
