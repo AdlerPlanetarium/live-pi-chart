@@ -1,12 +1,10 @@
-# @cjsx React.DOM
 React = require 'react/addons'
-Router = require 'react-router'
+Router = { Navigation } = require 'react-router'
 _ = require 'underscore'
-{ Navigation } = require 'react-router'
 { questionsRef } = require '../stores/db'
 questionDefinitions = require '../lib/questions'
 
-Question = React.createClass
+module.exports = React.createClass
   displayName: 'Question'
   mixins: [Navigation, Router.State]
 
@@ -19,7 +17,7 @@ Question = React.createClass
   getQuestionToDisplay: ->
     index = 0
     return {
-      question: _.find questionDefinitions, (question, i) => 
+      question: _.find questionDefinitions, (question, i) =>
         index = i
         question.slug is @getParams().questionSlug
       index: index
@@ -56,5 +54,3 @@ Question = React.createClass
       </div>
 
     <div className="question">{displayNodes}</div>
-
-module.exports = Question

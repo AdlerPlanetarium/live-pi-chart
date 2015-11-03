@@ -1,9 +1,8 @@
-# @cjsx React.DOM
 React = require 'react/addons'
 nv = window.nv
 { questionsRef } = require '../stores/db'
 
-PieChart = React.createClass
+module.exports = React.createClass
   displayName: 'PieChart'
 
   getInitialState: ->
@@ -53,5 +52,3 @@ PieChart = React.createClass
     <div className="pie-chart">
       <div id={@props.question.slug}><svg></svg></div>
     </div>
-
-module.exports = PieChart

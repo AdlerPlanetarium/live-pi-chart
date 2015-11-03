@@ -1,10 +1,9 @@
-# @cjsx React.DOM
 React = require 'react/addons'
 { Link, Navigation } = require 'react-router'
 
 questionsDefinitions = require '../lib/questions'
 
-QuestionsList = React.createClass
+module.exports = React.createClass
   displayName: 'QuestionList'
   mixins: [Navigation]
 
@@ -17,5 +16,3 @@ QuestionsList = React.createClass
       <br/><br/><br/>
       {questionNodes}
     </div>
-
-module.exports = QuestionsList

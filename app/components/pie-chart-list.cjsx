@@ -3,7 +3,7 @@ questionDefinitions = require '../lib/questions'
 { questionsToDisplay } = require '../stores/db'
 PieChart = require './pie-chart'
 
-PieChartList = React.createClass
+module.exports = React.createClass
   displayName: 'PieChartList'
 
   render: ->
@@ -17,5 +17,3 @@ PieChartList = React.createClass
     <div className="pie-chart-list">
       {pieCharts}
     </div>
-
-module.exports = PieChartList

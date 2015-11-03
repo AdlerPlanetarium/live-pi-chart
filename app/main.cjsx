@@ -1,10 +1,6 @@
 React = require 'react'
-Router = require 'react-router'
-{ Route, RouteHandler, DefaultRoute, Link, Navigation } = require 'react-router'
-_ = require 'underscore'
+Router = { Route, RouteHandler, DefaultRoute, Link, Navigation } = require 'react-router'
 
-Question = require './pages/question'
-QuestionsList = require './pages/questions-list'
 PieChartList = require './components/pie-chart-list'
 
 App = React.createClass
@@ -29,11 +25,10 @@ Home = React.createClass
 
 routes =
   <Route name="app" path="/" handler={ App }>
-    <Route name="questions" path="questions" handler={ QuestionsList } />
-    <Route name="question" path="questions/:questionSlug" handler={ Question } />
+    <Route name="questions" path="questions" handler={ require './pages/questions-list' } />
+    <Route name="question" path="questions/:questionSlug" handler={ require './pages/question' } />
     <DefaultRoute handler={ Home } />
   </Route>
 
 Router.run routes, (Handler) ->
   React.render <Handler />, document.body
-window.React = React
