@@ -1,55 +1,31 @@
 module.exports = [{
-  "title": "The Pluto Question",
-  "slug": "pluto_planet",
-  "question": "Should Pluto be called a “planet?”",
+  "title": "Our Expanding Universe",
+  "slug": "expanding_universe",
+  "question": "Why is the universe expanding?",
   "options": [
-    "Yes",
-    "No",
-    "Not sure"
+    "Ate way too much on Taco Tuesday",
+    "Dark energy",
+    "Because it's a pack rat",
+    "Manifest Destiny"
   ]
 }, {
-  "title": "Space Vacation",
-  "slug": "space_vacation",
-  "question": "What planet would you most like to visit/explore?",
+  "title": "A Very Very Dark Hole...",
+  "slug": "black_holes",
+  "question": "What’s really happening at the center of a black hole?",
   "options": [
-    "Mercury",
-    "Venus",
-    "Mars",
-    "Jupiter",
-    "Saturn",
-    "Uranus",
-    "Neptune"
+    "Carl Sagan’s playing bocce ball with Galileo",
+    "2-for-1 sale on vacuums (Oreck XL)"
+    "Matter orgy",
+    "Donald Trump’s hair is fighting itself"
   ]
 }, {
-  "title": "Otherworldly Objects",
-  "slug": "fantastic_features",
-  "question": "Besides planets, what is the coolest astronomical object?",
+  "title": "Opposite of Light Matter",
+  "slug": "dark_matters",
+  "question": "Why is dark matter so dark?",
   "options": [
-    "Black holes",
-    "Comets",
-    "Galaxies",
-    "Nebulae",
-    "Stars",
-    "Other"
-  ]
-}, {
-  "title": "NASA's Pinnacle",
-  "slug": "nasa_pinnacle",
-  "question": "What do you consider to be NASA’s greatest accomplishment so far?",
-  "options": [
-    "Moon landing",
-    "Mars rovers",
-    "Voyager probes",
-    "Hubble Space Telescope",
-    "Other"
-  ]
-}, {
-  "title": "E.T.",
-  "slug": "et",
-  "question": "Do you believe there is life on other planets?",
-  "options": [
-    "Yes",
-    "No",
-    "Not sure"
+    "Overslept in the tanning bed",
+    "Refuses to turn on nightlight",
+    "Troubled childhood (not unlike Batman)",
+    "It’s not dark — it’s just pensive"
   ]
 }]
